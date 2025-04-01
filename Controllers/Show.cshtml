@@ -1,0 +1,9 @@
+﻿@model Teacher   <!-- 1️⃣ Declares the model type -->
+
+<h2>Teacher Details</h2>  <!-- 2️⃣ Displays a heading -->
+
+<p><strong>Name:</strong> @Model.FirstName @Model.LastName</p>  <!-- 3️⃣ Displays name -->
+<p><strong>Hire Date:</strong> @Model.HireDate.ToShortDateString()</p>  <!-- 4️⃣ Displays hire date -->
+
+<a href="/TeacherPage/List">Back to List</a>  <!-- 5️⃣ Back button -->
+

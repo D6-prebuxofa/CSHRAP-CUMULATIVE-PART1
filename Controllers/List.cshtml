@@ -1,0 +1,13 @@
+﻿@foreach (var teacher in Model)
+{
+    <tr>
+        <td>@teacher.Name</td>
+        <td>@teacher.Subject</td>
+        <td>
+            <a href="@Url.Action("Delete", "TeacherPage", new { id = teacher.Id })" class="btn btn-danger">Delete</a>
+        </td>
+    </tr>
+}
+
+
+

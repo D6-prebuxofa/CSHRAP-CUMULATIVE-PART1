@@ -1,0 +1,14 @@
+﻿[HttpDelete("{id}")]
+public IActionResult Delete(int id)
+{
+    var teacher = _teacherService.GetTeacherById(id);
+    if (teacher == null)
+    {
+        return NotFound(); // If teacher not found, return 404
+    }
+
+    _teacherService.DeleteTeacher(id); // Call service to delete the teacher
+    return NoContent(); // Return a 204 No Content response on success
+}
+
+
